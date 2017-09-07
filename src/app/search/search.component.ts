@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../services/news.service';
-//import { Subject } from 'rxjs/Subject';
 
 
 @Component({
@@ -8,20 +7,26 @@ import { NewsService } from '../services/news.service';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent{
+export class SearchComponent implements OnInit{
 	
 	posts:any=[];
-
+	news:any=[];
   constructor(private newsService:NewsService) { }
+ngOnInit(){
 
-  getPosts(searchTerm : HTMLInputElement) {
-
-  	this.newsService.getPosts(searchTerm.value)
+  	this.newsService.getPosts()
   		.subscribe((posts)=> {
-  		console.log(posts.articles);
-  		this.posts = posts.articles;
+  		//console.log(posts);
+  		this.posts = posts.sources;
   		
   	});
   }
+  getPosts1(nameid){
+  this.newsService.getPosts1(nameid)
+  .subscribe((news) => {
+  	this.news =news.articles;
+  });
 
 }
+}
+
