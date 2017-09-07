@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+news:any
+
+onVoted(news:any){
+	this.news=news
+	console.log(this.news)
+}
 }

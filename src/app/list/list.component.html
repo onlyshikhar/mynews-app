@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="card-group">
+      <div class="card cardsize">
+        <div class="row">
+          <div class='col-md-4' *ngFor="let post of news">
+            <img class="card-img-top cardimg imgi" src="{{post.urlToImage}}" alt="No image">
+            <div class="card-body">
+              <h4 class="card-title"> <a href="{{post.url}}" target="blank">{{post.title}}</a></h4>
+              <p class="card-text">
+                {{post.description}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
