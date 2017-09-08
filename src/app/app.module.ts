@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { NewsService } from './services/news.service';
 import { ListComponent } from './list/list.component';
+import { FavouriteComponent } from './favourite/favourite.component';
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    ListComponent
+    ListComponent,
+    FavouriteComponent
   ],
   imports: [
     BrowserModule,

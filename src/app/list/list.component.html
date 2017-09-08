@@ -9,9 +9,13 @@
               <p class="card-text">
                 {{post.description}}
               </p>
+              <p class="card-footer text-muted">{{post.publishedAt}}</p>
+              <button type="button" class="btn btn-outline-success" (click)="addFav(post)">Add to Favourites</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <app-favourite></app-favourite>

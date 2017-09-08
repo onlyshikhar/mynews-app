@@ -1,0 +1,30 @@
+<div class="container">
+<br>
+<br>
+
+
+<button class="btn btn-primary my-2 my-sm-0 favbtn" type="button" (click)="favour()">favourite list</button>
+
+
+<div class="row">
+<div class='col-md-4' *ngFor="let data of data">
+
+<img class="card-img-top" src="{{data.urlToImage}}" alt="no image">
+  
+ <div class="card-body">
+
+ <h4 class="card-title">
+    <a href="{{data.url}}"  target="blank">{{data.title}}</a> </h4>
+
+   <p class="card-text">
+
+   {{data.description}}<br>
+
+id:{{data._id}}
+    </p>
+
+    <button class="btn btn-danger my-2 my-sm-0" type="button" (click)="delete(data)">Delete</button>
+</div>
+</div>
+</div>
+</div>
