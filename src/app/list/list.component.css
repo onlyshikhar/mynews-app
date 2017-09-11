@@ -1,4 +1,21 @@
 .imgi {
-	height:auto;
+	height:400px;
 	width:100%;
+}
+
+
+.row{
+	margin-top: 20px;
+}
+
+.container{
+		background-color: lightgray;
+		margin-bottom: 3%
+ }
+
+ @media(max-width: 768px) {
+	.container{
+		margin-bottom: 18%;
+	}
+	
 }

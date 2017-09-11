@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Http,Response} from '@angular/http';
 import { NewsService } from '../services/news.service';
 
@@ -8,26 +8,30 @@ import { NewsService } from '../services/news.service';
   styleUrls: ['./favourite.component.css']
 })
 
-export class FavouriteComponent {
+export class FavouriteComponent implements OnInit {
 
 data: any=[];
  constructor(private newsService:NewsService){
-    // console.log('helloserch component');    
+   
      
 }
 
 
-favour(){
-          this.newsService.favour().subscribe((data)=>{
-            //console.log(data);
-            this.data=data;
-    
-          });
-        }
 delete(data:any){
 	this.newsService.delete(data)
 	.subscribe(res=>{
 		this.data=res
+  
 	})
+  location.reload();
 }
-      }
+
+ngOnInit(){
+          this.newsService.favour().subscribe((data)=>{
+            this.data=data;
+
+    
+          });
+        }
+}
+ 

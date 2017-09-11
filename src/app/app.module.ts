@@ -9,18 +9,28 @@ import { SearchComponent } from './search/search.component';
 import { NewsService } from './services/news.service';
 import { ListComponent } from './list/list.component';
 import { FavouriteComponent } from './favourite/favourite.component';
+import { RouterModule,Routes } from '@angular/router';
+import { FavComponent } from './fav/fav.component';
+
+const approutes:Routes=[
+{path:'',component:SearchComponent},
+{path:'search' ,component:FavComponent},
+{path:'fav',component:FavouriteComponent}
+]
+
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     ListComponent,
-    FavouriteComponent
+    FavouriteComponent,
+    FavComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     HttpModule,
-    FormsModule
+    FormsModule,RouterModule.forRoot(approutes)
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

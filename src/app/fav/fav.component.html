@@ -1,0 +1,16 @@
+<router-outlet></router-outlet>
+<app-search (onVoted)="onVoted($event)"></app-search>
+
+<app-list [news]='news'></app-list>
+  <footer class="container-fluid footer fixed-bottom" >
+            <!-- footer begins -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5><u>Address</u></h5> E-213 Sector-27 NOIDA
+                </div>
+                <div class="col-sm-6">
+                    &copy;2017 MyNews.com
+                </div>
+                
+            </div>
+        </footer>

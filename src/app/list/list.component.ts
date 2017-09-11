@@ -17,6 +17,7 @@ favr:any={}
    			"urlToImage":post.urlToImage
    	}
    	this.newsService.addfav(post).subscribe((data)=>{
+       alert("Added to favourites");
    		//console.log(data)
    	})
    }

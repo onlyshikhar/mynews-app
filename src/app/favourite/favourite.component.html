@@ -1,15 +1,18 @@
+
 <div class="container">
 <br>
+ <button class="btn btn-warning my-2 my-sm-0" type="submit" [routerLink]="'/search'" (click)="getPosts1(nameid.value)" align="center">Back To Search</button>
+<br>
 <br>
 
 
-<button class="btn btn-primary my-2 my-sm-0 favbtn" type="button" (click)="favour()">favourite list</button>
-
+<!-- <button class="btn btn-primary my-2 my-sm-0 favbtn" type="button" (click)="favour()">favourite list</button>
+ -->
 
 <div class="row">
 <div class='col-md-4' *ngFor="let data of data">
 
-<img class="card-img-top" src="{{data.urlToImage}}" alt="no image">
+<img class="card-img-top imgi" src="{{data.urlToImage}}" alt="no image">
   
  <div class="card-body">
 
@@ -27,4 +30,18 @@ id:{{data._id}}
 </div>
 </div>
 </div>
+
+ <button class="btn btn-warning my-2 my-sm-0" type="submit" [routerLink]="'/search'" (click)="getPosts1(nameid.value)" align="center">Back To Search</button>
 </div>
+<footer class="container-fluid footer fixed-bottom" >
+            <!-- footer begins -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5><u>Address</u></h5> E-213 Sector-27 NOIDA
+                </div>
+                <div class="col-sm-6">
+                    &copy;2017 MyNews.com
+                </div>
+                
+            </div>
+        </footer>
