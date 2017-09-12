@@ -1,6 +1,6 @@
 body{
 	background-image: url("http://www.michaelkihn.de/Main%20Background.jpg");
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	background-size:cover;
 }
 

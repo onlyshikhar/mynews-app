@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properties -->
+    <title></title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/signup'">Sign Up</a>
+        </li>
+      </ul>
+     
+    </div>
+  </nav>
+  </div>
+
+<br>
+        <div class="container logform">
+        <form class="form-horizontal" role="form" method="POST" action="/login">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h2 class="log">Please Login</h2>
+                    <hr>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="form-group has-danger">
+                        <label class="sr-only" for="email">E-Mail Address</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                            <input type="text" name="email" class="form-control" id="email"
+                                   placeholder="you@example.com" required autofocus>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-3">
+                    <div class="form-control-feedback">
+                        
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="sr-only" for="password">Password</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                            <input type="password" name="password" class="form-control" id="password"
+                                   placeholder="Password" required>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-3">
+                    <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                        <!-- Put password error message here -->    
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6" style="padding-top: .35rem">
+                    <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                        <label class="form-check-label">
+                            <input class="form-check-input" name="remember"
+                                   type="checkbox" >
+                            <span class="log" style="padding-bottom: .15rem">Remember me</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 1rem">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-info"><i class="fa fa-sign-in"></i> Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="container-fluid footer fixed-bottom" >
+            <!-- footer begins -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5><u>Address</u></h5> E-213 Sector-27 NOIDA
+                </div>
+                <div class="col-sm-6">
+                    &copy;2017 MyNews.com
+                </div>
+                
+            </div>
+        </footer>
+</body>
+</html>

@@ -11,11 +11,15 @@ import { ListComponent } from './list/list.component';
 import { FavouriteComponent } from './favourite/favourite.component';
 import { RouterModule,Routes } from '@angular/router';
 import { FavComponent } from './fav/fav.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 const approutes:Routes=[
 {path:'',component:SearchComponent},
 {path:'search' ,component:FavComponent},
-{path:'fav',component:FavouriteComponent}
+{path:'fav',component:FavouriteComponent},
+{path:'login',component:LoginComponent},
+{path:'signup',component:SignupComponent}
 ]
 
 @NgModule({
@@ -24,7 +28,9 @@ const approutes:Routes=[
     SearchComponent,
     ListComponent,
     FavouriteComponent,
-    FavComponent
+    FavComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
